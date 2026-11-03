@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+
+    <h1>Habit Tracker</h1>
+
+    <form class="card-form" hx-post="/habits" hx-target="#habit-list" hx-swap="outerHTML" hx-on::after-request="this.reset()">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Habit title (e.g. Daily Workout)" required style="flex: 2;">
+            <input type="text" name="description" placeholder="Short description" style="flex: 3;">
+            <button type="submit" class="btn-primary">Add Habit</button>
+        </div>
+    </form>
+
+    <div id="habit-list">
+        {% include "partials/habit_list.html" %}
+    </div>
+
+</body>
+</html>
