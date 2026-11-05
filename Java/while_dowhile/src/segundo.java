@@ -5,7 +5,7 @@ public class segundo {
         int n = 0;
 
         do {
-            
-        }
+
+        } while(true);
     }
 }
