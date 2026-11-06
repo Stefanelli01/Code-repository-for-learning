@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
 
     static void main() {
@@ -13,5 +15,20 @@ public class Main {
 
         String info = String.format("\nNome: %s", nome);
         System.out.println(info);
+
+        System.out.println(info.contains("Luiz"));
+
+        String frase = "Eu sou brasileiro";
+        System.out.println(frase.concat("!!!"));
+
+        frase = frase.toUpperCase().concat("!!");
+        System.out.println(frase);
+
+        frase = frase
+                .toUpperCase()
+                .concat("!!");
+
+        System.out.println(frase);
+
     }
 }
