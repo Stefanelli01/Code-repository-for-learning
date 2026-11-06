@@ -21,5 +21,16 @@ public class Main {
             System.out.println(n);
         }
 
+
+        String[] nomes = {"João", "Maria", "Carlos"};
+
+        nomes[0] = "Joaquina";
+
+        for (String nome: nomes) {
+            System.out.println(nome);
+        }
+
+
+
     }
 }
