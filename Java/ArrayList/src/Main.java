@@ -12,5 +12,7 @@ public class Main {
     System.out.println(clientes.toString());
 
     clientes.remove(1);
+
+    System.out.println(clientes.get(0));
     }
 }
