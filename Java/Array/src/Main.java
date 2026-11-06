@@ -17,5 +17,9 @@ public class Main {
 
         System.out.println(numeros[1]);
 
+        for (int n: numeros) {
+            System.out.println(n);
+        }
+
     }
 }
