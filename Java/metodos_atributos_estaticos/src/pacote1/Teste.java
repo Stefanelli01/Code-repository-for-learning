@@ -16,5 +16,4 @@ public class Teste {
     void ola(){
         System.out.println(nome); // não estático, printa variável da instância
     }
-
 }
