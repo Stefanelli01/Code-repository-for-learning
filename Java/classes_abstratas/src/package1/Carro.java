@@ -4,4 +4,5 @@ public abstract class Carro {
 
     public abstract void correr();
 
+    public void acelerar(); 
 }
