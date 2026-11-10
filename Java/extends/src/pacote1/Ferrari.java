@@ -1,4 +1,6 @@
 package pacote1;
 
-public class Ferrari {
+public class Ferrari extends Carro {
+
+
 }
