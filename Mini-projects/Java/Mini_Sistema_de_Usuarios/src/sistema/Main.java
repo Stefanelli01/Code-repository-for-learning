@@ -8,6 +8,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         boolean sistema = false;
+        boolean opcoes = false;
         Pessoa usuario = new Pessoa();
 
 
@@ -22,22 +23,27 @@ public class Main {
             int opcao = scanner.nextInt();
             scanner.nextLine();
 
-            if (opcao == 1) {
+            while (!opcoes) {
+                if (opcao == 1) {
 
-            usuario.gerar_usuario();
+                    usuario.gerar_usuario();
 
-            } else if (opcao == 2) {
+                } else if (opcao == 2) {
 
-                System.out.println("\n== Visualização de Usuário ==");
-                System.out.printf("\nNome do usuário: %s", usuario.nome);
-                System.out.printf("\nsobrenome do usuário: %s", usuario.sobrenome);
-                System.out.printf("\nidade do usuário: %s", usuario.idade);
-                System.out.printf("\nAltura do usuário: %s", usuario.altura);
-                System.out.printf("\nProfissão do usuário: %s", usuario.profissao);
-            } else if (opcao == 3) {
-                sistema = true;
-            } else {
-                System.out.println("Insira uma opção válida");
+                    System.out.println("\n== Visualização de Usuário ==");
+                    System.out.printf("\nNome do usuário: %s", usuario.nome);
+                    System.out.printf("\nsobrenome do usuário: %s", usuario.sobrenome);
+                    System.out.printf("\nidade do usuário: %s", usuario.idade);
+                    System.out.printf("\nAltura do usuário: %s", usuario.altura);
+                    System.out.printf("\nProfissão do usuário: %s", usuario.profissao);
+
+                    System.out.printf("O usuário %s %s possui %s anos e %s de altura, ele é um %s", usuario.nome, usuario.sobrenome, usuario.idade, usuario.altura, usuario.profissao);
+                } else if (opcao == 3) {
+                    sistema = true;
+                    opcoes = true;
+                } else {
+                    System.out.println("Insira uma opção válida");
+                }
             }
 
 
