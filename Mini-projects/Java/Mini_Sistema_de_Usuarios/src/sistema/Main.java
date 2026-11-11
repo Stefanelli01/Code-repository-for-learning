@@ -30,10 +30,14 @@ public class Main {
 
                 System.out.println("\n== Visualização de Usuário ==");
                 System.out.printf("\nNome do usuário: %s", usuario.nome);
-                System.out.printf("sobrenome do usuário: %s", usuario.sobrenome);
-                System.out.printf("idade do usuário: %s", usuario.idade);
-                System.out.printf("Altura do usuário: %s", usuario.altura);
-                System.out.printf("Profissão do usuário: %s", usuario.profissao);
+                System.out.printf("\nsobrenome do usuário: %s", usuario.sobrenome);
+                System.out.printf("\nidade do usuário: %s", usuario.idade);
+                System.out.printf("\nAltura do usuário: %s", usuario.altura);
+                System.out.printf("\nProfissão do usuário: %s", usuario.profissao);
+            } else if (opcao == 3) {
+                sistema = true;
+            } else {
+                System.out.println("Insira uma opção válida");
             }
 
 

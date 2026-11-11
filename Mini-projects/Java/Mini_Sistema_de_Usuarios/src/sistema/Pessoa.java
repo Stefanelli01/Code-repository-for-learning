@@ -16,23 +16,22 @@ public class Pessoa {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\nPor favor insira somente o primeiro nome do usuário: ");
-        usuario.nome = scanner.nextLine();
+        this.nome = scanner.nextLine();
 
         System.out.println("Por favor insira somente o sobrenome do usuário: ");
-        usuario.sobrenome = scanner.nextLine();
+        this.sobrenome = scanner.nextLine();
 
         System.out.println("Por favor insira a idade do usuário: ");
-        usuario.idade = scanner.nextInt();
+        this.idade = scanner.nextInt();
 
         System.out.println("Por favor insira a altura do usuário: ");
-        usuario.altura = scanner.nextDouble();
+        this.altura = scanner.nextDouble();
+        scanner.nextLine();
 
         System.out.println("Por favor insira a profissão do usuário: ");
-        usuario.profissao = scanner.nextLine();
-        scanner.nextLine();
+        this.profissao = scanner.nextLine();
 
         System.out.println("Usuário cadastrado com sucesso!");
 
-        scanner.close();
     }
 }
