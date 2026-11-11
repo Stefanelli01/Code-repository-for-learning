@@ -18,6 +18,10 @@ public class Main {
 
             System.out.println("Invalid age");
 
+        }finally {
+
+            System.out.println("O processo foi finalizado");
+
         }
     }
 }
