@@ -7,6 +7,8 @@ public class Main {
         Pessoa usuario = new Pessoa();
         boolean sistema = false;
 
+        Scanner scanner = new Scanner(System.in);
+
         while (sistema) {
             System.out.println("== Sistema de Usuários ==");
             System.out.println("\n Menu de opções: ");
@@ -14,6 +16,17 @@ public class Main {
             System.out.println("2 - Visualizar usuário");
             System.out.println("3 - Sair");
             System.out.println("\n Por favor insira uma opção: ");
+            int opcao = scanner.nextInt();
+
+            if (opcao == 1) {
+
+            }
+
+
         }
+
+        scanner.close();
     }
+
+
 }
