@@ -1,0 +1,8 @@
+---- Minecraft Crash Report ----
+
+!!! Invasive Optimizations is installed! Check its section for a list of affected mods.
+
+
+// Shall we play a game?
+
+Time: 2026-11-04 00:33:07
