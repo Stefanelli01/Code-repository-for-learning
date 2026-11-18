@@ -8,6 +8,9 @@ public class main {
 
     static void main(String[] args) {
 
+        Scanner scanner = new Scanner();
+        int opcao = -1;
+
         boolean sistema = false;
         boolean welcome = false;
 
@@ -34,39 +37,71 @@ public class main {
             System.out.println("\nMenu de opções: ");
             System.out.println("\n1 - Criar tarefa");
             System.out.println("(2- Verificar tarefas");
-            System.out.println("3 - Remover tarefa");
-            System.out.println("4 - Sair");
+            System.out.println("3 - Concluir tarefa");
+            System.out.println("4 - Remover tarefa");
+            System.out.println("0 - Sair");
+
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcao){
+
+                case 1:
+                    System.out.println("Descrição da tarefa: ");
+                    String desc = scanner.nextLine();
+                    adicionar(desc);
+                    break;
+
+                case 2:
+                    listar();
+                    break;
+
+                case 3:
+                    System.out.println("ID da tarefa a ser concluída: ");
+                    int idConcluir = scanner.nextInt();
+                    remover(idConcluir);
+                    break;
+
+                case 4:
+                    System.out.println("ID da tarefa a ser removida: ");
+                    int idRemover = scanner.nextInt();
+                    remover(idRemover);
+                    break;
+
+                case 0:
 
 
-            Scanner scan2 = new Scanner(System.in):
-            int option = scan2.nextLine();
-
-            try{
-
-                if (option == 1){
-
-                }
-
-
-
-            } catch (
-
-            )
-
+            }
         }
     }
 }
 
-public class tarefa {
+public class Tarefa {
+    private int id;
+    private String descricao;
+    private boolean concluída;
 
-    List<tarefa> tarefas = new ArrayList<>();
+    public Tarefa(int id, String descricao, boolean concluída) {
+        this.id = id;
+        this.descricao = descricao;
+        this.concluída = concluída;
+    }
 
-    public void adicionar(String descricao) {
+    public int getId() {
+        return id;
+    }
 
-        int proximoID = 1;
-        tarefa nova = tarefa(proximoID, descricao, false);
-        tarefas.add(nova);
-        proximoID++;
-        
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public boolean is
+
+    public boolean isConcluída() {
+        return concluída;
+    }
+
+    public void setConcluída(boolean concluída) {
+        this.concluída = concluída;
     }
 }
