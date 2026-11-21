@@ -84,15 +84,17 @@ public class ProdutoDAO {
         }
     }
 
-    public void deletar(int id) {
+    public boolean deletar(int id) {
         String sql = "DELETE FROM produtos WHERE id = ?";
 
         try (Connection conn = conectar();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, id);
-            pstmt.executeUpdate();
+            int linhasAfetadas = pstmt.executeUpdate();
+            return linhasAfetadas > 0;
         } catch (SQLException e) {
             System.err.println("Erro ao deletar produto: " + e.getMessage());
+            return false;
         }
     }
 }
