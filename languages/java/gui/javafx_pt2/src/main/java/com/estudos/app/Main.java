@@ -11,13 +11,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        // O FXMLLoader lê o arquivo visual de dentro da pasta resources
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("tela_principal.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 450, 400);
 
-        // Carrega o layout raiz e define o tamanho da janela (largura 350, altura 200)
-        Scene scene = new Scene(fxmlLoader.load(), 350, 200);
-
-        primaryStage.setTitle("Primeira Tela FXML");
+        primaryStage.setTitle("Mini Sistema de Vendas");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

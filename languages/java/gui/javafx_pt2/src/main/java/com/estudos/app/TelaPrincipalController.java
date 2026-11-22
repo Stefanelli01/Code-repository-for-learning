@@ -2,19 +2,40 @@ package com.estudos.app;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class TelaPrincipalController {
 
-    // O nome da variável DEVE ser idêntico ao fx:id definido no FXML
     @FXML
-    private Label lblMensagem;
+    private TextField txtProduto;
 
-    private int contador = 0;
-
-    // O nome do método DEVE ser idêntico ao onAction (sem o #)
     @FXML
-    protected void aoClicarNoBotao() {
-        contador++;
-        lblMensagem.setText("Você clicou " + contador + " vez(es)!");
+    private TextField txtCliente;
+
+    @FXML
+    private Label lblStatus;
+
+    @FXML
+    public void initialize() {
+        lblStatus.setText("");
+    }
+
+    @FXML
+    protected void realizarVenda() {
+        String produto = txtProduto.getText();
+        String cliente = txtCliente.getText();
+
+        if (produto.isBlank() || cliente.isBlank()) {
+            lblStatus.setText("Erro: Preencha produto e cliente!");
+            lblStatus.setStyle("-fx-text-fill: red;");
+            System.out.println("Erro: Campos obrigatórios vazios.");
+        } else {
+            lblStatus.setText("Venda realizada: " + produto + " para " + cliente);
+            lblStatus.setStyle("-fx-text-fill: green;");
+            System.out.println("Venda registrada -> Produto: " + produto + " | Cliente: " + cliente);
+
+            txtProduto.clear();
+            txtCliente.clear();
+        }
     }
 }

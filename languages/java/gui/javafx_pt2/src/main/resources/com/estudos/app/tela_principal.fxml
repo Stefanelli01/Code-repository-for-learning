@@ -7,33 +7,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<!-- O atributo fx:controller amarra este arquivo visual à nossa classe Java -->
+<AnchorPane prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.estudos.app.TelaPrincipalController">
+    <children>
+        <ToolBar layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="422.0">
+            <items>
+                <Button mnemonicParsing="false" text="Vender"/>
+                <Button mnemonicParsing="false" text="Estoque"/>
+                <Button mnemonicParsing="false" text="Atualizar Preço"/>
+                <Button mnemonicParsing="false" text="Remover Produto"/>
+            </items>
+        </ToolBar>
 
+        <Label layoutX="143.0" layoutY="76.0" text="Venda de produtos" underline="true">
+            <font>
+                <Font name="System Italic" size="20.0"/>
+            </font>
+        </Label>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.estudos.app.TelaPrincipalController">
-   <children>
-      <ToolBar layoutX="19.0" layoutY="14.0" prefHeight="41.0" prefWidth="371.0">
-         <items>
-            <Button mnemonicParsing="false" text="Vender" />
-            <Button mnemonicParsing="false" text="Estoque" />
-            <Button mnemonicParsing="false" text="Atualizar Preço" />
-            <Button mnemonicParsing="false" text="Remover Produto" />
-         </items>
-      </ToolBar>
-      <Label layoutX="108.0" layoutY="55.0" prefHeight="61.0" prefWidth="194.0" text="Venda de produtos" underline="true">
-         <font>
-            <Font name="Arial Italic" size="22.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="139.0" text="Produto" />
-      <TextField layoutX="119.0" layoutY="135.0" />
-      <Label layoutX="65.0" layoutY="179.0" text="Cliente" />
-      <TextField layoutX="119.0" layoutY="175.0" />
-      <Button layoutX="166.0" layoutY="221.0" mnemonicParsing="false" text="Vender" />
-      <Label layoutX="131.0" layoutY="258.0" text="Venda realizada!" textFill="#00e42e">
-         <font>
-            <Font name="System Italic" size="17.0" />
-         </font>
-      </Label>
-   </children>
-</AnchorPane>
+        <Label layoutX="88.0" layoutY="144.0" text="Produto"/>
+        <TextField fx:id="txtProduto" layoutX="151.0" layoutY="140.0" prefHeight="25.0" prefWidth="180.0"/>
+
+        <Label layoutX="93.0" layoutY="188.0" text="Cliente"/>
+        <TextField fx:id="txtCliente" layoutX="151.0" layoutY="184.0" prefHeight="25.0" prefWidth="180.0"/>
+
+        <Button layoutX="200.0" layoutY="235.0" mnemonicParsing="false" onAction="#realizarVenda" text="Vender"/>
+
+        <Label fx:id="lblStatus" alignment="CENTER" layoutX="50.0" layoutY="285.0" prefWidth="350.0" text="">
+            <font>
+                <Font name="System Italic" size="14.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>   
