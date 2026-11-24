@@ -31,9 +31,40 @@ public class main {
                         System.out.println("3 - Divisão");
                         System.out.println("4 - Multiplicação");
                         System.out.println("5 - Operação Aberta");
-                        System.out.println("0 - Sair");
+                        System.out.println("0 - Voltar ao menu principal");
+                        int opcao_op = scanner.nextInt();
+                        scanner.nextLine();
 
+                        switch (opcao_op) {
 
+                         case 1 -> {
+                             System.out.println("Digite o primeiro valor: ");
+                             double a = scanner.nextDouble();
+                             System.out.println("Digite o segundo valor: ");
+                             double b = scanner.nextDouble();
+
+                             System.out.printf("%s + %s = %s", a, b, (a+b));
+                         }
+                         case 2 -> {
+
+                         }
+                         case 3 -> {
+
+                         }
+                         case 4 -> {
+
+                         }
+                         case 5 -> {
+
+                         }
+                         case 0 ->{
+                             System.out.println("Voltando ao menu inicial");
+                             sistema_op = true;
+                         }
+                         default -> {
+
+                         }
+                        }
                     }
                 }
 
